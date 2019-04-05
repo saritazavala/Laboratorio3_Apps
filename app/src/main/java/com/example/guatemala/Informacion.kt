@@ -11,10 +11,14 @@ class Informacion : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_informacion)
-        //var datos = getIntent().getExtras()
-        //val obtenidos:String = datos.getString("hola")
-        //val mostrar: TextView = findViewById<TextView>(R.id.datosTikal)
-        //mostrar.setText(obtenidos)
+
+        val info:TextView = findViewById<TextView>(R.id.datosTikal)
+        var bundle  = intent.extras
+        val message = bundle.getString("Nombre")
+        info.setText(message)
+
+
+
 
 
 

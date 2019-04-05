@@ -1,5 +1,6 @@
 package com.example.guatemala
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //Funcion para mostrar, habilitary deshabilitar los texts
+
     fun mostrarTexto(view:View){
         //Se llaman y referencian a las partes de mi interfaz
         //Botones, textviews
@@ -30,25 +32,35 @@ class MainActivity : AppCompatActivity() {
             contador = contador + 1
             if (contador%2 !=0){
 
-                ingresado.setEnabled(true);
-                nombre.isEnabled= true
+                //ingresado.setEnabled(true);
+                //nombre.isEnabled= true
+                nombre.visibility = View.VISIBLE
+                ingresado.visibility = View.VISIBLE
                 resultado.setText(ingresado.text.toString())
         }
             else {
+                nombre.visibility = View.INVISIBLE
+                ingresado.visibility = View.INVISIBLE
 
-                ingresado.setEnabled(false);
-                nombre.isEnabled= false
+                //ingresado.setEnabled(false);
+                //nombre.isEnabled= false
                 resultado.setText(ingresado.text.toString())
             }
 
         }
     }
 
-   /* fun  abrirTikal(view: View) {
-        var intento: Intent = Intent(this,Informacion::class.java)
-        startActivity(intento)
+   fun  abrirTikal(view: View) {
+       val botonT:Button = findViewById<Button>(R.id.botonTikal)
+       botonT.setOnClickListener{
+           val intento: Intent = Intent(this,Informacion::class.java)
+           intento.putExtra("Nombre","Tikal")
+           startActivity(intento)
+       }
 
-    }*/
+
+
+    }
 
 
 
