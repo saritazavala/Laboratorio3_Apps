@@ -4,10 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,10 +16,29 @@ class MainActivity : AppCompatActivity() {
 
     fun mostrarTexto(view:View){
         val boton:ImageButton = findViewById<ImageButton>(R.id.BotonEstrella)
-        val ingresdo:TextView = findViewById<TextView>(R.id.NombreIngresado)
+        val ingresado: EditText = findViewById<EditText>(R.id.NombreIngresado)
+        val resultado:TextView = findViewById<TextView>(R.id.Resultado)
+        val nombre:TextView = findViewById<TextView>(R.id.EtiquetaNombre)
+        var contador = 1
         boton.setOnClickListener {
-            // your code to perform when the user clicks on the button
-            Toast.makeText(this, "No puede disminuir abajo de cero", Toast.LENGTH_LONG).show()
+            contador = contador + 1
+
+            if (contador%2 !=0){
+
+                ingresado.setEnabled(true);
+                nombre.isEnabled= true
+                resultado.setText(ingresado.text.toString())
+
+
+        }
+            else {
+
+                ingresado.setEnabled(false);
+                nombre.isEnabled= false
+                resultado.setText(ingresado.text.toString())
+
+            }
+
         }
     }
 
