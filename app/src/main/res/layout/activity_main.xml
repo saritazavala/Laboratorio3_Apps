@@ -8,21 +8,18 @@
         tools:context=".MainActivity">
     <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="431dp"
-            android:layout_height="153dp"
-            android:id="@+id/linearLayout"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_width="421dp"
+            android:layout_height="146dp"
+            android:id="@+id/linearLayout" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
         <ImageView
-                android:layout_width="400dp"
-                app:srcCompat="@drawable/r" android:id="@+id/imageView3"
-                android:layout_weight="1" android:layout_height="244dp" android:contentDescription="TODO"
-        />
+                android:layout_width="wrap_content"
+                android:layout_height="194dp" app:srcCompat="@drawable/esta"
+                android:id="@+id/imageView3"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="8dp"/>
     </LinearLayout>
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@android:drawable/btn_star_big_on"
-            android:id="@+id/imageButton"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="132dp" android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
+
+
 </android.support.constraint.ConstraintLayout>
