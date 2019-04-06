@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+/*Sara Zavala 18893
+Programación de Apps mobiles
+Laboratorio 3: Guatemala
+Vuernes 05 de Abril 2019 */
 
 class MainActivity : AppCompatActivity() {
 
@@ -94,7 +98,8 @@ class MainActivity : AppCompatActivity() {
         )
         startActivity(intento)
     }
-
+    //Funcion para que el boton de regresar muestre un Toast con el comentario
+    //Escrito e en editText
     fun backear(view: View) {
         val boton:Button = findViewById<Button>(R.id.back)
         val ingresdo:TextView = findViewById<TextView>(R.id.ComentarioIngresado)
