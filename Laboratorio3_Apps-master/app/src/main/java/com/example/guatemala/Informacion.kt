@@ -9,6 +9,10 @@ import android.view.View
 import android.widget.TextView
 import android.widget.*
 import com.example.guatemala.databinding.ActivityInformacionBinding
+/*Sara Zavala 18893
+Programación de Apps mobiles
+Laboratorio 3: Guatemala
+Vuernes 05 de Abril 2019 */
 
 class Informacion : AppCompatActivity() {
 
@@ -24,6 +28,7 @@ class Informacion : AppCompatActivity() {
     }
     }
 
+    //funcion para regresar al menu principal y mostrar en pantalla un toast del comentarion ingresado
     fun backear(view: View) {
         val boton:Button = findViewById<Button>(R.id.back)
         val ingresdo:TextView = findViewById<TextView>(R.id.ComentarioIngresado)
